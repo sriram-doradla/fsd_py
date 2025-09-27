@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e(dc!=!5mpe9#a5b+7%et_4p=_lma5f&4kc79rdzdyur1d6ub&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ecomb.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["fsd-py.onrender.com", "localhost", "127.0.0.1"]
 
 
 CSRF_TRUSTED_ORIGINS = [
