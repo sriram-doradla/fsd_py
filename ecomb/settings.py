@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-e(dc!=!5mpe9#a5b+7%et_4p=_lma5f&4kc79rdzdyur1d6ub&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ecomb.onrender.com", "localhost"]
+ALLOWED_HOSTS = ["ecomb.onrender.com", "localhost", "127.0.0.1"]
+
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",   # React frontend
@@ -105,18 +106,22 @@ WSGI_APPLICATION = 'ecomb.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'ee1',
+    #     'USER': 'root',
+    #     'PASSWORD': 'sriram@385',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ee1',
-        'USER': 'root',
-        'PASSWORD': 'sriram@385',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-    
 }
 
-AUTH_USER_MODEL = 'website.AuthUser'
+AUTH_USER_MODEL = "website.AuthUser"
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
